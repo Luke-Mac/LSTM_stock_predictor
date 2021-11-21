@@ -31,7 +31,11 @@ Steps Taken:
 The same model architecture and random seed was used for both notebooks. This was necessary to accurately compare the performance of the FNG model vs the closing price model. 
 
 ## Build & Train Analysis
-By adjusting the Window Size and Unit Size from 10 down to 1 I concluded that the best outcome came from using 9.
+By adjusting the Window Size and Unit Size from 10 down to 1 I concluded that the best outcome came from using 9.  With this new window & unit size of 9 I then proceeded to analyse which batch size worked best.  I concluded that a batch size of 10 seemed to work well.
 
 ![build_train_analysis.png](images/build_train_analysis.png)
 
+## Evaluate the Performance of Each Model
+After preparing, building, training and testing the two models the **"Closing Prices"** model would appear to be the most accurate at predicting the Bitcoin prices.  Taking in to account the loss (mean squared error) of both models the **"Closing Prices"** model once again was the most accurate.
+![lstm_btc_close_chart.png](images/lstm_btc_close_chart.png)
+![lstm_btc_fng_chart.png](images/lstm_btc_fng_chart.png)
